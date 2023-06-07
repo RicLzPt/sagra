@@ -1,6 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "path";
 export default defineNuxtConfig({
+    app: {
+        head: {
+            title: "General Nuxt Typescript Tailwind Starter",
+
+        },
+    },
     alias: {
         "@": resolve(__dirname, "/"),
     },
@@ -24,5 +29,9 @@ export default defineNuxtConfig({
     typescript: {
         strict: true,
         typeCheck: true
-    }
+    },
+    runtimeConfig: {
+        apiSecretOverride: '',
+        apiSecret: process.env.API_SECRET_ENV,
+    },
 })

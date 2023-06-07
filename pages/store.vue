@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+    title: "Store Page",
+});
 import { storeToRefs } from 'pinia';
 import { useCounterStore } from '~/stores/myStore';
 
